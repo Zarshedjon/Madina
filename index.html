@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самарканд - Жемчужина Востока</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/servis.png" alt="Логотип Самарканда" id="logo-img">
+            <span>Sammaza.uz</span>
+        </div>
+        <div class="burger-menu" id="burgerBtn">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#places">Достопримечательности</a></li>
+                <li><a href="#video">Видео</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <img src="img/maxresdefault.jpg" alt="Самарканд панорама" id="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Добро пожаловать в Самарканд</h1>
+            <p>Жемчужина Востока, древний город на Шелковом пути</p>
+        </div>
+    </section>
+    <section id="places" class="places-section">
+        <div class="container">
+            <h2 class="section-title">Знаменитые места Самарканда</h2>
+            <div class="places-grid">
+                <div class="place-card" data-place="registon">
+                    <img src="img/d443d00ad2c718acd98e4c427d3ea925.jpg" alt="Регистан" class="place-img">
+                    <h3>Площадь Регистан</h3>
+                    <button class="info-btn" data-place="registon">Подробнее</button>
+                </div>
+                <div class="place-card" data-place="bukhari">
+                    <img src="img/tild3139-3963-4364-a165-386633643461__5okbsh17618119000101.jpeg" alt="Имам Аль-Бухари" class="place-img">
+                    <h3>Комплекс Имама Аль-Бухари</h3>
+                    <button class="info-btn" data-place="bukhari">Подробнее</button>
+                </div>
+                <div class="place-card" data-place="shohizinda">
+                    <img src="img/FAAAC118C0A880142A8346A372E79AF0.jpg" alt="Шахи Зинда" class="place-img">
+                    <h3>Ансамбль Шахи Зинда</h3>
+                    <button class="info-btn" data-place="shohizinda">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2 class="section-title">Видео о Самарканде</h2>
+            <div class="video-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/n9yF9e9zUHE" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">💬 Отзывы о видео</h2>
+            <div class="review-form">
+                <h3>✍️ Написать отзыв</h3>
+                <div class="form-group">
+                    <input type="text" id="reviewName" placeholder="Ваше имя" class="review-input">
+                </div>
+                <div class="form-group">
+                    <textarea id="reviewText" rows="4" placeholder="Ваш отзыв о видео..." class="review-textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="rating">
+                        <span>⭐ Оценка:</span>
+                        <select id="reviewRating" class="rating-select">
+                            <option value="5">5 ★ - Отлично</option>
+                            <option value="4">4 ★ - Хорошо</option>
+                            <option value="3">3 ★ - Средне</option>
+                            <option value="2">2 ★ - Плохо</option>
+                            <option value="1">1 ★ - Ужасно</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="submitReviewBtn" class="submit-review-btn">📝 Отправить отзыв</button>
+            </div>
+            <div class="reviews-list">
+                <h3>📖 Отзывы зрителей</h3>
+                <div id="reviewsContainer">
+                    <div class="no-reviews">Пока нет отзывов. Будьте первым!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modalContent">
+            <!-- СЮДА БУДЕТ ПОДСТАВЛЯТЬСЯ ТЕКСТ ИЗ JS -->
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <section class="contacts">
+    <h2>Контакты</h2>
+
+    <p><strong>Телефон:</strong> +998 90 126 33 03</p>
+    <p><strong>Email:</strong> info@sammaza.com</p>
+
+    <div class="socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/sammaza.uz/" target="_blank">
+            <img src="img/inst.png" alt="Instagram" id="inst">
+        </a>
+    </div>
+</section>
+    <div class="container">
+        <p>© 2024 Самарканд - Древний город. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
